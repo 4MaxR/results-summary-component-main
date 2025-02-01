@@ -1,0 +1,218 @@
+/* Define CSS Variables */
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 0.9);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --font-family: 'Hanken Grotesk', Arial, sans-serif;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: var(--pale-blue);
+}
+
+/* Card Component */
+.card {
+  width: 37.5rem;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+}
+
+/* Result Section */
+.result {
+  background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+  padding: 2rem;
+  width: 50%;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.result-header {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Circle Component */
+.circle {
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+/* Score and Grade */
+.score {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.total {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+.grade {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  width: 12.5rem;
+}
+
+/* Summary Section */
+.summary {
+  width: 50%;
+  padding: 2rem;
+}
+
+.summary-title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Category Styles */
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+.category:hover {
+  transform: translateX(4px);
+}
+
+.category-name {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.category-score {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.category-score span {
+  color: #888;
+}
+
+/* Reaction Categories */
+.reaction {
+  background: rgba(255, 0, 0, 0.05);
+  color: var(--light-red);
+}
+
+.memory {
+  background: rgba(255, 165, 0, 0.05);
+  color: var(--orangey-yellow);
+}
+
+.verbal {
+  background: rgba(0, 128, 0, 0.05);
+  color: var(--green-teal);
+}
+
+.visual {
+  background: rgba(0, 0, 255, 0.05);
+  color: var(--cobalt-blue);
+}
+
+/* Button Styles */
+.continue-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 24px;
+  background: #303b59;
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(to bottom, var(--violet-blue), var(--light-royal-blue));
+}
+
+.continue-btn:active {
+  transform: translateY(1px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+    margin: 1.25rem;
+  }
+
+  .result,
+  .summary {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .continue-btn {
+    transition: none;
+  }
+}
+
+@media print {
+  .card {
+    box-shadow: none;
+  }
+  .continue-btn {
+    display: none;
+  }
+}
