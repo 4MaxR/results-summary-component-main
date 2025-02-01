@@ -61,8 +61,7 @@ In future projects, I want to focus on enhancing my JavaScript skills, particula
 ## Author
 
 - Website - [4MaxR](https://github.com/4MaxR)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@4MaxR].(https://www.frontendmentor.io/profile/4MaxR)
 
 ## Acknowledgments
 
